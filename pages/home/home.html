@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Administrador</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="openModal()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button (click)="logOut()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-home" padding>
+ 
+   
+                <ion-list>
+                     <ion-list-header>
+                        Registros de boletines
+                    </ion-list-header>
+                       <div class="tabla">
+                        <ion-item *ngFor='let boletin of boletin | async'>
+                          <ion-avatar item-start>
+                            <img src="{{boletin.portada}}" >
+                          </ion-avatar>
+                          <h2>{{ boletin.titulo }}</h2>
+                          <p>{{boletin.descripcion}}</p>
+                          <button ion-button clear item-end color="primary" (click)="openModalEdit(boletin)"><ion-icon name="nutrition"></ion-icon></button>
+                          <button ion-button clear item-end color="danger" (click)="removeBoletin(boletin)"><ion-icon name="close"></ion-icon></button>
+                        </ion-item>
+                        </div>
+                </ion-list>
+            
+   
+   
+  
+  
+</ion-content>
+
+
+ <ion-footer >
+    <ion-toolbar color="primary">
+      <ion-title>@copyright 2017</ion-title>
+    </ion-toolbar>
+  </ion-footer>

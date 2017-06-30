@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Detalles del Boletin</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+    <ion-list>
+       <ion-item-sliding *ngFor='let boletin of boletin | async'>
+        <ion-item>
+          <ion-card>
+            <ion-item>
+              <ion-avatar item-start>
+                <!--<img src="{{boletin.portada}}">-->
+              </ion-avatar>
+              <h2>{{boletin.titulo}}</h2>
+              <p>Autor: {{boletin.autor}}</p>
+              <p>Categoria: {{boletin.categoria}}</p>
+            </ion-item>
+
+             <img src="{{boletin.portada}}">
+
+            <ion-card-content  >
+                <p class="cortar">
+                
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    
+                </p>
+            </ion-card-content>
+
+                     <ion-row>
+                          <ion-col>
+                            <button ion-button icon-left clear small>
+                              <ion-icon name="book"></ion-icon>
+                              <div><a href="{{boletin.pdf}}">PDF</a></div>
+                            </button>
+                          </ion-col>
+                          <ion-col center text-center>
+                            <ion-note>
+                              2017
+                            </ion-note>
+                          </ion-col>
+                        </ion-row>
+
+          </ion-card>
+
+          <!--<ion-grid>
+            <ion-row>
+              <ion-col col-6>
+                      <img id="sombra" src="{{boletin.portada}}" >
+              </ion-col>
+              <ion-col col-6>
+                  <h2>{{boletin.titulo}}</h2>
+                  <p>{{boletin.descripcion}}</p>
+              </ion-col>
+            </ion-row>
+
+          </ion-grid>-->
+               <!--   
+          <h2>{{ boletin.titulo }}</h2>
+          <button ion-button clear item-end color="primary" (click)="openModalEdit(boletin)"><ion-icon name="nutrition"></ion-icon></button>
+          <button ion-button clear item-end color="danger" (click)="removeBoletin(boletin)"><ion-icon name="close"></ion-icon></button>-->
+        </ion-item>
+        </ion-item-sliding>
+    </ion-list>
+  
+   
+</ion-content>

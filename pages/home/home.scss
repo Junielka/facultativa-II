@@ -1,0 +1,35 @@
+page-home {
+    .page-home{
+        background-color: #ecf0f1 !important;
+    }
+    .tabla{
+        width: 60%;
+        margin: 0 auto;
+        -webkit-box-shadow: 1px 3px 20px 2px #7AB8C2;
+        box-shadow: 1px 3px 20px 2px #7AB8C2;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    table {
+   width: 100%;
+   border: 1px solid #000;
+}
+th, td {
+   width: 25%;
+   text-align: left;
+   vertical-align: top;
+   border: 1px solid #000;
+   border-collapse: collapse;
+   padding: 0.3em;
+   caption-side: bottom;
+}
+caption {
+   padding: 0.3em;
+   color: #fff;
+    background: #000;
+}
+th {
+   background: #eee;
+}
+}
